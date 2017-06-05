@@ -8,10 +8,11 @@ function Header (props) {
     <View style={styles.header}>
       <View style={styles.spacer} />
       <View style={styles.titleContainer}>
-        <Image
+        {/* <Image
           style={styles.headerImage}
-
-        />
+          resizeMode="contain"
+          source={require('../image/altheader.png')}
+        /> */}
         <Text style={styles.title}>{title}</Text>
       </View>
     </View>
@@ -33,18 +34,14 @@ function Header (props) {
 
 const styles = StyleSheet.create({
   header: {
-    height: 60,
-    backgroundColor: 'rgb(29, 180, 213)'
-  },
-  headerImage: {
-    uri: '../image/batsu-header.jpg',
-    width: Dimensions.get('window').width,
+    marginTop: 20,
+
     height: 60,
   },
-  spacer: {
-    height: 20,
-    backgroundColor: '#E6C218'
-  },
+  // spacer: {
+  //   height: 20,
+  //   backgroundColor: 'gainsboro'
+  // },
   title: {
     fontSize: 18,
     fontWeight: 'bold',
@@ -53,8 +50,15 @@ const styles = StyleSheet.create({
   titleContainer: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
-  }
+    justifyContent: 'center',
+    backgroundColor: 'red'
+  },
+  headerImage: {
+    flex: 1,
+    width: Dimensions.get('window').width,
+    // height: 'contain',
+  },
+
 });
 
 export default Header;
