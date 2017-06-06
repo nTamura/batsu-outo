@@ -35,7 +35,7 @@ export default class App extends React.Component {
 
           <View style={styles.comp}>
             <View style={styles.footer}>
-              <Text style={styles.footerText}>Footer</Text>
+              <Text style={styles.footerText}>nTamura 2017</Text>
             </View>
           </View>
 

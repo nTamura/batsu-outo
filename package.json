@@ -21,6 +21,8 @@
   "dependencies": {
     "expo": "^17.0.0",
     "react": "16.0.0-alpha.6",
-    "react-native": "^0.44.0"
+    "react-native": "^0.44.0",
+    "react-native-simple-sound": "^1.0.0",
+    "react-native-sound": "^0.10.1"
   }
 }
