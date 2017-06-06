@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
 import Dimensions from 'Dimensions';
+import HeaderImage from '../components/HeaderImage';
 
 function Header (props) {
   const { title = '' } = props;
@@ -8,11 +9,7 @@ function Header (props) {
     <View style={styles.header}>
       <View style={styles.spacer} />
       <View style={styles.titleContainer}>
-        {/* <Image
-          style={styles.headerImage}
-          resizeMode="contain"
-          source={require('../image/altheader.png')}
-        /> */}
+        <HeaderImage />
         <Text style={styles.title}>{title}</Text>
       </View>
     </View>

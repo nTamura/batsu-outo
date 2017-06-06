@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image, TouchableHighlight, Dimensions } from 'react-native';
 
-const Audio = require('react-native-sound')
+const Sound = require('react-native-sound')
 
 let outo_01 = new Sound('out_1.mp3', Sound.MAIN_BUNDLE, (error) => {
   if (error) {

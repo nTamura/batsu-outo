@@ -1,4 +1,5 @@
-# BATSU OUTO! ![alt text](./image/altheader.png "Gaki Header")
+# BATSU OUTO!
+![alt text](./image/altheader.png "Gaki Header")
 
 Simple React Native app, from famous Japanese show Gaki no Tsukai's Batsu game.
 
