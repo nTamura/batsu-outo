@@ -2,6 +2,9 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableHighlight, Alert } from 'react-native';
 import Header from './components/Header';
 import Button from './components/Button';
+import Audio from './components/Audio';
+
+
 // import ButtonScreen from './components/ButtonScreen';
 
 const onPress = () => {
@@ -35,7 +38,10 @@ export default class App extends React.Component {
 
           <View style={styles.comp}>
             <View style={styles.footer}>
-              <Text style={styles.footerText}>nTamura 2017</Text>
+              <Text style={styles.footerText}>
+
+                nTamura 2017
+              </Text>
             </View>
           </View>
 
