@@ -2,14 +2,11 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableHighlight, Alert } from 'react-native';
 import Header from './components/Header';
 import Button from './components/Button';
-import Audio from './components/Audio';
 
 
 // import ButtonScreen from './components/ButtonScreen';
 
-const onPress = () => {
-  Alert.alert('Harrooo');
-};
+
 
 
 
@@ -23,6 +20,10 @@ export default class App extends React.Component {
   //     console.log('playyyy')
   //   })
   // }
+  onPress = () => {
+    Alert.alert('Harrooo');
+  };
+
 
   render() {
     return (
@@ -33,7 +34,7 @@ export default class App extends React.Component {
           </View>
 
           <View style={styles.comp}>
-            <Button />
+            <Button onPress={this.onPress} />
           </View>
 
           <View style={styles.comp}>
