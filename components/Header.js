@@ -9,8 +9,8 @@ function Header (props) {
     <View style={styles.header}>
       <View style={styles.spacer} />
       <View style={styles.titleContainer}>
-        <HeaderImage />
         <Text style={styles.title}>{title}</Text>
+        <HeaderImage style={styles.headerImage} />
       </View>
     </View>
   );
@@ -33,27 +33,28 @@ const styles = StyleSheet.create({
   header: {
     marginTop: 20,
 
-    height: 60,
+    height: 100,
   },
   // spacer: {
   //   height: 20,
   //   backgroundColor: 'gainsboro'
   // },
   title: {
-    fontSize: 18,
+    fontSize: 32,
     fontWeight: 'bold',
-    color: 'white'
+    color: 'white',
+    backgroundColor: 0,
+    textShadowColor: '#000000',
+    // textShadowRadius: 4,
+
+    zIndex: 5,
+    position: 'absolute',
   },
   titleContainer: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'red'
-  },
-  headerImage: {
-    flex: 1,
-    width: Dimensions.get('window').width,
-    // height: 'contain',
+    zIndex: 0
   },
 
 });

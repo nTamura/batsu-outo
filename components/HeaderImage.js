@@ -7,7 +7,7 @@ class HeaderImage extends React.Component {
     return (
       <View>
         <Image
-          resizeMode="contain"
+          style={styles.headerImage}
           source={require('../image/batsu-header.jpg')}
         />
       </View>
@@ -17,7 +17,13 @@ class HeaderImage extends React.Component {
 
 
 const styles = StyleSheet.create({
-
+  headerImage: {
+    flex: 1,
+    width: Dimensions.get('window').width,
+    height: 100,
+    position: 'relative',
+    zIndex: 2,
+  },
 });
 
 export default HeaderImage;

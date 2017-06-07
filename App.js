@@ -1,27 +1,31 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableHighlight, Alert } from 'react-native';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Button from './components/Button';
-
-
-// import ButtonScreen from './components/ButtonScreen';
-
-
-
+import Audio from 'react-native-sound';
 
 
 export default class App extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = { playOuto: false };
-  // }
-  // onPlay = () {
-  //   this.setState({
-  //     console.log('playyyy')
-  //   })
-  // }
+
   onPress = () => {
-    Alert.alert('Harrooo');
+    let outo_1 = new Audio('./out_1.mp3', Audio.MAIN_BUNDLE, (error) => {
+      if (error) {
+        console.log('failed to load the sound', error);
+        return;
+      }
+      // loaded successfully
+      console.log('duration in seconds: ' + outo_1.getDuration() + 'number of channels: ' + outo_1.getNumberOfChannels());
+
+      outo_1.play((success) => {
+        console.log(success)
+        if (success) {
+          console.log('successfully finished playing');
+        } else {
+          console.log('playback failed due to audio decoding errors');
+        }
+      });
+    });
   };
 
 
@@ -38,12 +42,7 @@ export default class App extends React.Component {
           </View>
 
           <View style={styles.comp}>
-            <View style={styles.footer}>
-              <Text style={styles.footerText}>
-
-                nTamura 2017
-              </Text>
-            </View>
+            <Footer />
           </View>
 
         </View>
@@ -56,7 +55,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FF0000',
   },
   body: {
     flex: 1,
@@ -65,17 +64,7 @@ const styles = StyleSheet.create({
   },
   comp: {
     // alignContent: 'center',
-
   },
-  footer: {
-    backgroundColor: '#FF0000',
-  },
-  footerText: {
-    color: "#FFF",
-    textAlign: 'center',
-  },
-
-
   batsu: {
     fontSize: 20,
     textAlign: 'center',

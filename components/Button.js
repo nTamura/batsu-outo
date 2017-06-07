@@ -3,25 +3,6 @@ import { View, StyleSheet, Text, Image, TouchableHighlight, Dimensions } from 'r
 import Audio from 'react-native-sound'
 let width = Dimensions.get("window").width;
 
-let outo_01 = new Audio('out_1.mp3', Audio.MAIN_BUNDLE, (error) => {
-  if (error) {
-      console.log('failed to load the sound', error);
-      return;
-    }
-    // loaded successfully
-    console.log('duration in seconds: ' + outo_01.getDuration() + 'number of channels: ' + outo_01.getNumberOfChannels());
-  });
-
-  // Play the sound with an onEnd callback
-  outo_01.play((success) => {
-    if (success) {
-      console.log('successfully finished playing');
-    } else {
-      console.log('playback failed due to audio decoding errors');
-    }
-  });
-
-
 class Button extends React.Component {
   render() {
   return (
@@ -48,11 +29,11 @@ const styles = StyleSheet.create({
 
   button: {
     backgroundColor: '#FAFAFA',
-    width: width * .5,
+    width: width * .6,
     height: 64,
     resizeMode: 'contain',
-    borderColor: '#FF2020',
-    borderWidth: 3,
+    borderColor: '#FFC700',
+    borderWidth: 4,
     borderRadius: 10,
 
   },
