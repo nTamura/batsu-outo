@@ -3,8 +3,6 @@ import { View, StyleSheet, Text, Image, TouchableHighlight, Dimensions } from 'r
 import Audio from 'react-native-sound'
 let width = Dimensions.get("window").width;
 
-const Audio = require('react-native-sound')
-
 let outo_01 = new Audio('out_1.mp3', Audio.MAIN_BUNDLE, (error) => {
   if (error) {
       console.log('failed to load the sound', error);
