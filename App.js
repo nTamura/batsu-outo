@@ -11,7 +11,7 @@ export default class App extends Component {
   // switch(Picker.Item) {
   //     case "Matsumoto":
   //       // onPress()
-  //       // something output audio file.. put whole function in here for each one?
+  //       // something output audio file.. put whole function in here for each one? for now output outo_01 for each 
   //         break;
   //     case "Hamada":
   //         code block
