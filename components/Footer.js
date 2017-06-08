@@ -8,7 +8,11 @@ class Footer extends Component {
     return (
       <View style={styles.footer}>
         <Text style={styles.footerText}>
-          nTamura BatsuOuto! 2017
+          <Image
+            style={styles.footerLogo}
+            source={require('../image/gh.png')}
+          />
+           nTamura BatsuOuto! 2017
         </Text>
       </View>
     )
@@ -18,12 +22,25 @@ class Footer extends Component {
 
 const styles = StyleSheet.create({
   footer: {
-    backgroundColor: '#FF0000',
+    backgroundColor: '#FFF',
+    height: 22,
+    display: 'flex',
+    justifyContent: 'center',
+    alignContent: 'center',
+
   },
   footerText: {
-    color: "#FFF",
+    color: "#000",
     textAlign: 'center',
+
   },
+  footerLogo:{
+    height: 15,
+    width: 15,
+
+
+
+  }
 });
 
 export default Footer;

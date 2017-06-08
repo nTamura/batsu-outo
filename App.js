@@ -62,9 +62,14 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <Image
+          source={require('./image/2.jpg')}
+          style={styles.backgroundImage}
+        />
+
         <View style={styles.body}>
           <View style={styles.comp}>
-            <Header title="Batsu OUTO!" />
+            <Header title="GAKI NO TSUKAI" />
           </View>
 
           <View style={styles.comp}>
@@ -89,7 +94,15 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FF0000',
+    zIndex: 1,
+    position: 'relative',
+  },
+  backgroundImage: {
+    marginTop: 20,
+    flex: 1,
+    zIndex: 0,
+    resizeMode: 'repeat',
+    position: 'absolute'
   },
   body: {
     flex: 1,
