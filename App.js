@@ -8,11 +8,16 @@ import Audio from 'react-native-sound';
 
 
 export default class App extends Component {
+  //  something output audio file..
+  //  put whole function in here for each one? for now output outo_01 for each
+
   // switch(Picker.Item) {
-  //     case "Matsumoto":
+  //     case value={"Matsumoto"}:
   //       // onPress()
-  //       // something output audio file.. put whole function in here for each one? for now output outo_01 for each 
+  //          whole function here? for each case?
+  //           or just define func and call it here
   //         break;
+
   //     case "Hamada":
   //         code block
   //         break;
