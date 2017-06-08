@@ -4,36 +4,57 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Button from './components/Button';
 import Picker from './components/Picker';
+import BackgroundImage from './components/Background';
 import Audio from 'react-native-sound';
 
-
 export default class App extends Component {
-   something output audio file..
-   put whole function in here for each one? for now output outo_01 for each
+  //  something output audio file..
+  //  put whole function in here for each one? for now output outo_01 for each
+  //
+  // switch(condition) {
+  //   case = "Matsumoto":
+  //   audio = 'out_01.mp3'
+  //   break;
+  //
+  //   case "Hamada":
+  //       code block
+  //       break;
+  //   case "Yamazaki":
+  //       code block
+  //       break;
+  //   case "Endo":
+  //       code block
+  //       break;
+  //   case "Tanaka":
+  //       code block
+  //       break;
+  //   case "Zenin":
+  //       code block
+  //       break;
+  //   default:
+  //       outo_01.mp3
+  //       // play default above sound
+  //
+  //
+  //
+  // let value = this.value;
+  // const Rank = React.createClass({
+  //   render: function() {
+  //
+  // switch (this.props.value) {
+  //   case "Matsumoto":
+  //   Audio('./out_1.mp3', Audio.MAIN_BUNDLE)
+  //   break;
+  //
+  //   case "Matsumoto":
+  //   Audio('./out_1.mp3', Audio.MAIN_BUNDLE
+  //   break;
+  //   default:
+  //     throw new Error('error');
+  // }
+  //
+  // return ProductPage;
 
-  switch(onPress(case)) {
-      case = "Matsumoto":
-        audio = 'out_01.mp3'
-      break;
-
-      case "Hamada":
-          code block
-          break;
-      case "Yamazaki":
-          code block
-          break;
-      case "Endo":
-          code block
-          break;
-      case "Tanaka":
-          code block
-          break;
-      case "Zenin":
-          code block
-          break;
-      default:
-          outo_01.mp3
-          // play default above sound
 
 
   onPress = () => {
@@ -60,21 +81,17 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Image
-          source={require('./image/2.jpg')}
-          style={styles.backgroundImage}
-        />
-
+        <BackgroundImage>
         <View style={styles.body}>
           <View style={styles.comp}>
-            <Header title="GAKI NO TSUKAI" />
+            <Header title="" />
           </View>
 
-          <View style={styles.comp}>
-          </View>
+          {/* <View style={styles.comp}>
+          </View> */}
 
           <View style={styles.comp}>
-            <Picker style={styles.list}/>
+            {/* <Picker style={styles.list}/> */}
             <Button onPress={this.onPress} />
           </View>
 
@@ -83,6 +100,7 @@ export default class App extends Component {
           </View>
 
         </View>
+        </BackgroundImage>
       </View>
     );
   }
@@ -92,14 +110,14 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    zIndex: 1,
+    zIndex: 2,
     position: 'relative',
   },
   backgroundImage: {
     marginTop: 20,
     flex: 1,
     zIndex: 0,
-    resizeMode: 'repeat',
+    resizeMode: 'cover',
     position: 'absolute'
   },
   body: {
