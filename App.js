@@ -8,36 +8,34 @@ import Audio from 'react-native-sound';
 
 
 export default class App extends Component {
-  //  something output audio file..
-  //  put whole function in here for each one? for now output outo_01 for each
+   something output audio file..
+   put whole function in here for each one? for now output outo_01 for each
 
-  // switch(Picker.Item) {
-  //     case value={"Matsumoto"}:
-  //       // onPress()
-  //          whole function here? for each case?
-  //           or just define func and call it here
-  //         break;
+  switch(onPress(case)) {
+      case = "Matsumoto":
+        audio = 'out_01.mp3'
+      break;
 
-  //     case "Hamada":
-  //         code block
-  //         break;
-  //     case "Yamazaki":
-  //         code block
-  //         break;
-  //     case "Endo":
-  //         code block
-  //         break;
-  //     case "Tanaka":
-  //         code block
-  //         break;
-  //     case "Zenin":
-  //         code block
-  //         break;
-  //     default:
-  //         outo_01.mp3
-  //         // play default above sound
-  //
-  //
+      case "Hamada":
+          code block
+          break;
+      case "Yamazaki":
+          code block
+          break;
+      case "Endo":
+          code block
+          break;
+      case "Tanaka":
+          code block
+          break;
+      case "Zenin":
+          code block
+          break;
+      default:
+          outo_01.mp3
+          // play default above sound
+
+
   onPress = () => {
     let outo_1 = new Audio('./out_1.mp3', Audio.MAIN_BUNDLE, (error) => {
       if (error) {
