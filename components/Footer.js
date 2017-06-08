@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
 import Dimensions from 'Dimensions';
 // import HeaderImage from '../components/HeaderImage';
 
-class Footer extends React.Component {
+class Footer extends Component {
   render() {
     return (
       <View style={styles.footer}>

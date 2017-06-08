@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
 import Dimensions from 'Dimensions';
 
-class HeaderImage extends React.Component {
+class HeaderImage extends Component {
   render() {
     return (
       <View>

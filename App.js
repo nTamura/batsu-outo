@@ -1,13 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, TouchableHighlight, Alert } from 'react-native';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Button from './components/Button';
+import Picker from './components/Picker';
 import Audio from 'react-native-sound';
 
 
-export default class App extends React.Component {
-
+export default class App extends Component {
+  // switch(Picker.Item) {
+  //     case "Matsumoto":
+  //       // onPress()
+  //       // something output audio file.. put whole function in here for each one?
+  //         break;
+  //     case "Hamada":
+  //         code block
+  //         break;
+  //     case "Yamazaki":
+  //         code block
+  //         break;
+  //     case "Endo":
+  //         code block
+  //         break;
+  //     case "Tanaka":
+  //         code block
+  //         break;
+  //     case "Zenin":
+  //         code block
+  //         break;
+  //     default:
+  //         outo_01.mp3
+  //         // play default above sound
+  //
+  //
   onPress = () => {
     let outo_1 = new Audio('./out_1.mp3', Audio.MAIN_BUNDLE, (error) => {
       if (error) {
@@ -38,6 +63,10 @@ export default class App extends React.Component {
           </View>
 
           <View style={styles.comp}>
+          </View>
+
+          <View style={styles.comp}>
+            <Picker style={styles.list}/>
             <Button onPress={this.onPress} />
           </View>
 
@@ -64,6 +93,9 @@ const styles = StyleSheet.create({
   },
   comp: {
     // alignContent: 'center',
+  },
+  list: {
+    color: 'white'
   },
   batsu: {
     fontSize: 20,
